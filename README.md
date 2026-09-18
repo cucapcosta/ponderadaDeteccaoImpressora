@@ -70,4 +70,4 @@ Execute `python scripts/modelo.py` novamente para escolher outra opção. **Apó
 
 ### Uso de IA
 
-Fora utilizado agentes de IA, junto com Wisprflow e equivalentes, para auxílio de documentação e assistências na parte _pesada_ de código, além de ajudar na ideia da captura de áudio da forma que foi executada
+Foram utilizados agentes de IA como apoio na discussão de ideias e decisões técnicas, principalmente na abordagem de captura e processamento do áudio, além de auxiliar na documentação. Também foram usadas ferramentas de ditado, como o Wispr Flow.
