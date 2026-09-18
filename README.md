@@ -17,7 +17,7 @@ Leituras incertas contam como ausência de impressão. Essa regra substituiu a e
 
 No modo sem modelo treinado, o brilho acompanha o RMS por PWM, com saturação em RMS 0,15. Esse modo reaproveita o cálculo existente, sem criar outra tarefa. Com modelo treinado, o LED indica o resultado da detecção.
 
-Um script Python permite coletar dados, treinar e testar o modelo. A coleta salva as características em CSV, não o áudio completo. O treino gera o arquivo ONNX e os pesos usados pelo ESP.
+Um script Python permite coletar dados, treinar e testar o modelo. A coleta salva as características em CSV, não o áudio completo. Há um [exemplo com 10 linhas reais](docs/exemplo_dados.csv), de duas sessões e classes, fora do dataset de treino; as sessões completas não são incluídas. O treino gera o arquivo ONNX e os pesos usados pelo ESP.
 
 ### Como a detecção funciona
 
