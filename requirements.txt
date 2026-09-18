@@ -1,0 +1,6 @@
+numpy>=2.3,<3
+scikit-learn>=1.8,<2
+onnx>=1.19,<2
+onnxruntime>=1.23,<2
+skl2onnx>=1.20,<2
+pyserial>=3.5,<4

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Tarefas FreeRTOS do monitor acústico</title>
+  <desc id="descricao">INMP441 alimenta I2S e DMA. Captura envia blocos ao buffer circular do FreeRTOS. Features recebe um bloco e devolve seu espaço após a leitura. Features transfere janelas por valor para detecção, responsável pelo LED e serial.</desc>
+  <defs><marker id="seta" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#475569"/></marker></defs>
+  <rect width="1080" height="470" rx="16" fill="#f8fafc"/>
+  <g font-family="sans-serif" fill="#0f172a" text-anchor="middle">
+    <text x="540" y="38" font-size="23" font-weight="bold">Monitor acústico · ESP32 + FreeRTOS</text>
+    <rect x="30" y="70" width="240" height="60" rx="8" fill="#e2e8f0"/>
+    <text x="150" y="95" font-size="17">INMP441 → I2S / DMA</text><text x="150" y="118" font-size="14">16 kHz · mono · palavras de 32 bits</text>
+    <rect x="30" y="185" width="240" height="100" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="150" y="211" font-size="19" font-weight="bold">Captura · prioridade 3</text><text x="150" y="239" font-size="15">8000 amostras por bloco</text><text x="150" y="262" font-size="15">Sem buffer: drena e descarta</text>
+    <rect x="420" y="185" width="250" height="100" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="545" y="211" font-size="19" font-weight="bold">Features · prioridade 2</text><text x="545" y="239" font-size="15">RMS · cruzamentos por zero</text><text x="545" y="262" font-size="15">Uma janela de 500 ms</text>
+    <rect x="820" y="185" width="230" height="100" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="935" y="211" font-size="19" font-weight="bold">Detecção · prioridade 1</text><text x="935" y="239" font-size="15">Modelo + confirmação temporal</text><text x="935" y="262" font-size="15">LED e telemetria serial</text>
+    <text x="345" y="202" font-size="14">buffer circular</text><text x="345" y="252" font-size="13">bloco de áudio</text>
+    <text x="745" y="202" font-size="14">fila_features</text><text x="745" y="252" font-size="13">janela por valor</text>
+    <text x="340" y="335" font-size="14">Devolve espaço ao buffer após a leitura</text>
+    <text x="340" y="362" font-size="14">FreeRTOS gerencia o armazenamento do áudio</text>
+    <text x="540" y="410" font-size="15">Buffer circular e fila sincronizam as três tarefas.</text>
+    <text x="540" y="439" font-size="15">O modelo roda na tarefa de detecção. Alerta: mensagem na serial e LED.</text>
+  </g>
+  <g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#seta)">
+    <path d="M150 130 V182"/><path d="M270 225 H417"/><path d="M670 225 H817"/>
+    <path d="M545 285 V309 H150 V287"/>
+  </g>
+</svg>

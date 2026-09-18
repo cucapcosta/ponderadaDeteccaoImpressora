@@ -1,0 +1,17 @@
+{
+  "arquivos_teste": [
+    "parada_1789764084584834736.csv",
+    "imprimindo_1789756799505404924.csv"
+  ],
+  "matriz_confusao": [
+    [
+      97,
+      24
+    ],
+    [
+      47,
+      74
+    ]
+  ],
+  "acuracia": 0.7066115702479339
+}
